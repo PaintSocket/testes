@@ -1,0 +1,74 @@
+html, body{
+    margin: 0px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    --background: #f4f5fa;
+}
+.left, .right{
+    height: 100%;
+    width: 100%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    position: relative;
+    background-color: var(--background);
+}
+.input{
+    heigt: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: #e0e0e0 2px solid;
+}
+.input:hover {
+    border-color: #0095ff;
+}
+.input:focus {
+    border-color: #0095ff;
+    background: var(--background);
+}
+.button{
+    background: #0095ff;
+    font-weight: 550;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 8px;
+}
+#form-register{
+    height: 100%;
+    display: grid;
+    gap: 10px;
+    padding: 10%;
+    align-content: center;
+}
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background: purple;
+    height: 150px;
+    width: 150px;
+}
+.logo-blur{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+}
+@supports not (backdrop-filter: blur(5px)) {
+    .logo-blur{
+        background: rgba(255, 255, 255, .7);
+    }
+}
+.logo-blur{
+    backdrop-filter: blur(10px);
+}
